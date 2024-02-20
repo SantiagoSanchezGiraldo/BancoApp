@@ -23,11 +23,13 @@ public class MainActivity extends AppCompatActivity {
         claveInput = findViewById(R.id.clave_input);
         loginBtn = findViewById(R.id.login_btn);
 
-        loginBtn.setOnClickListener(new View.setOnClickListener(){
+        login_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                inicioTit.setText("Se a Logeado");
+                Intent login_btn = new Intent(MainActivity.this, InicioBanc.class);
+                startActivity(login_btn);
             }
         });
+        
     }
 }
